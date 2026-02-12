@@ -10,11 +10,12 @@ A web-based Hospital Management System developed using HTML, CSS, Java, JSP, Ser
 
 ###  Admin
 - Approve/Reject Doctor Requests
+- Viwe Doctor
 - View Patients
-- Manage Appointments
+- View Appointments
 
 ###  Doctor
-- Login
+- Register & Login
 - View Appointments
 - Change Password
 
