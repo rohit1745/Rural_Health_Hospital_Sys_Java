@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f9f9f9;
+}
+header a {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: white;
+    text-decoration: none;
+    justify-content: right;
+    font-size: 1rem;
+    text-align: center;
+    
+}
+/* HEADER */
+header {
+    background: #23527c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 2rem;
+    align-items: center;
+    padding-left: 30px;
+    justify-content: space-evenly;
+}
+
+/* MAIN TABS */
+.tabs-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 25px auto;
+    background: white;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.main-label {
+    margin-right: 37px;
+    padding: 8px 16px;
+    background: #2d4d85;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-label:hover {
+    background: #1a3f60;
+}
+
+/* HIDE RADIO */
+input[type="radio"] {
+    display: none;
+}
+
+/* CONTENT AREAS */
+.tab-content {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    gap: 15px;
+}
+
+/* SHOW CONTENT WHEN RADIO CHECKED */
+#tab-doctor:checked ~ #doctor-content,
+#tab-patient:checked ~ #patient-content,
+#tab-appointment:checked ~ #appointment-content {
+    display: block;
+}
+
+/* SUB-TABS */
+.sub-label {
+     padding: 8px 14px;
+    margin-right: 37px;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #4b6cb7;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.doctor-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* PARENT FLEX */
+.doctor-actions {
+    display: flex;          /* makes all forms in one line */
+    gap: 20px;
+    align-items: center;
+}
+
+/* REMOVE DEFAULT FORM BLOCK */
+.doctor-actions form {
+    margin: 0;              /* remove unwanted spacing */
+}
+
+/* BUTTON STYLE */
+.sub-btn {
+    padding: 8px 16px;
+    background: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sub-btn:hover {
+    background: #3a5598;
+}
+
+.sub-btn.delete {
+    background: #c0392b;
+}
+
+
+/* already ok but keep */
+
+.sub-label:hover {
+    background: #3a5598;
+}
+
+/* SUB CONTENT HIDE BY DEFAULT */
+#add-doc-content,
+#view-doc-content,
+#del-doc-content {
+    display: none;
+    margin-top: 15px;
+}
+/* hide both contents by default */
+#doctor-content,
+#patient-content,
+#appointment-content {
+    display: none;
+    margin-top: 40px;
+}
+
+/* show doctor only */
+#tab-doctor:checked ~ #doctor-content {
+    display: block;
+}
+
+/* show patient only */
+#tab-patient:checked ~ #patient-content {
+    display: block;
+}
+
+/* show appointment only */
+#tab-appointment:checked ~ #appointment-content {
+    display: block;
+}
+
+/* actions in one line */
+.doctor-actions,
+.patient-actions,
+.appointment-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* buttons */
+.sub-btn {
+    padding: 8px 16px;
+    background: #4b6cb7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sub-btn:hover {
+    background: #3a5598;
+}
+
+.sub-btn.delete {
+    background: #c0392b;
+}
+
+/* SUB CONTENT SHOW */
+#add-doc:checked ~ #add-doc-content,
+#view-doc:checked ~ #view-doc-content,
+#del-doc:checked ~ #del-doc-content {
+    display: block;
+}
+
+/* STYLE BOXES */
+.sub-content {
+    background: #eef2f5;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.sub-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.sub-content input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.sub-content button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #23527c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.sub-content button:hover {
+    background: #1a3f60;
+}
+
+/* PATIENT CONTENT */
+#patient-content button {
+    padding: 10px 20px;
+    background: #23527c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#patient-content button:hover {
+    background: #1a3f60;
+}
+
+/* appointment CONTENT */
+#appointment-content button {
+    padding: 10px 20px;
+    background: #23527c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#appointment-content button:hover {
+    background: #1a3f60;
+}

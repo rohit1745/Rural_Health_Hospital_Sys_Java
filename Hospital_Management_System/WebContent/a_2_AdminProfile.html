@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile</title>
+    <link rel="stylesheet" href="css/a_2_AdminProfile.css">
+</head>
+<body>
+
+    <header>
+        <h2>Admin Dashboard</h2>
+        <a href="index.html">Logout</a>
+    </header>
+
+    <div class="tabs-container">
+
+        <!-- MAIN TABS -->
+       
+      	<input type="radio" name="main-tabs" id="tab-doctor" checked>
+        <label for="tab-doctor" class="main-label">Doctor</label> 
+
+        <input type="radio" name="main-tabs" id="tab-patient">
+        <label for="tab-patient" class="main-label">Patient</label>
+		
+		<input type="radio" name="main-tabs" id="tab-appointment">
+        <label for="tab-appointment" class="main-label">Appointment</label>
+
+        <!-- DOCTOR CONTENT -->
+        <div class="tab-content" id="doctor-content">
+
+    
+    <div class="doctor-actions">
+
+        <form action="a_6_AdminDoctorRequest.jsp" method="post">
+            <button type="submit" class="sub-btn">Doctor Requests</button>
+        </form>
+
+        <form action="a_4_AdminDoctorView.jsp" method="get">
+            <button type="submit" class="sub-btn">View Doctor</button>
+        </form>
+
+        <form action="DeleteDoctorServlet" method="post">
+            <button type="submit" class="sub-btn delete">
+                Delete Doctor
+            </button>
+        </form>
+
+    </div>
+
+</div>
+    
+        <!-- PATIENT CONTENT -->
+       <!--  <div class="tab-content" id="patient-content">
+            
+    <form action="a_3_AdminPatientView.jsp" method="get">
+    <button type="submit" onclick="loadpatients()">Show Patients</button>
+    <div id="patientData"></div>
+</form> -->
+ <div class="tab-content" id="patient-content">
+        <div class="patient-actions">
+            <form action="a_3_AdminPatientView.jsp" method="get">
+                <button type="submit">Show Patients</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ✅ APPOINTMENT CONTENT (SEPARATE) -->
+    <div class="tab-content" id="appointment-content">
+        <div class="appointment-actions">
+            <form action="a_5_AdminAppointmentView.jsp" method="get">
+                <button type="submit">Show Appointments</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+    
+            
+        </div>
+
+    </div>
+    <script>
+function loadPatients() {
+    fetch('ViewPatientServlet')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('patientData').innerHTML =
+                `<h3>Patients List</h3>
+                <table border="1" cellpadding="8">
+                    <tr>
+                        <th>PID</th><th>PName</th><th>PAge</th><th>PGender</th>
+                        <th>PContact</th><th>PAddress</th><th>PEmail</th><th>PPassword</th>
+                    </tr>` +
+                    data +
+                `</table>`;
+        })
+        .catch(error => console.log(error));
+}
+</script>
+    
+
+</body>
+</html>
