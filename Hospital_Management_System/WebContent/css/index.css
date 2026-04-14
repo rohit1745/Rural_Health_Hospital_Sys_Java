@@ -1,0 +1,227 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* TOP PANEL */
+.top-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #3b6b96;
+    padding: 12px 20px;
+    color: white;
+}
+
+.top-panel .logo img {
+    width: 200px;
+    height: 100px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+/* NAV */
+.top-nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+/* SECOND PANEL */
+.second-panel {
+    display: flex;
+    justify-content: center;
+    background: #2d4d85;
+    padding: 8px 0;
+}
+
+.second-panel a {
+    margin: 0 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.second-panel a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 40px;
+    gap: 15px;
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #23527c;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* SPECIALIZATION */
+.specialties {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.specialties h2 {
+    margin-bottom: 20px;
+    color: #23527c;
+}
+
+.specialty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.specialty-card {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.specialty-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* DOCTOR SLIDER */
+.doctor-slider {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+}
+
+.doctor-slider h2 {
+    color: #23527c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.doctor-slider p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+input[name="doctor-slide"] {
+    display: none;
+}
+
+.doctor-slides {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* SHOW SLIDES */
+#doc-1:checked ~ .doctor-slides .slide1,
+#doc-2:checked ~ .doctor-slides .slide2 {
+    display: flex;
+}
+
+/* DOCTOR CARD */
+.slide .doc-card {
+    width: calc(25% - 15px);
+    height: 320px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* 🔥 FIXED IMAGE SIZE */
+.slide .doc-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 3px solid #23527c;
+    margin-bottom: 10px;
+}
+
+/* DOTS */
+.doc-dots {
+    margin-top: 20px;
+}
+
+.doc-dots label {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+#doc-1:checked ~ .doc-dots label[for="doc-1"],
+#doc-2:checked ~ .doc-dots label[for="doc-2"] {
+    background: #23527c;
+}
+
+/* VIDEOS */
+.video-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.videos iframe {
+    width: 400px;
+    height: 220px;
+    border-radius: 6px;
+}
+
+/* CONTACT */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #23527c;
+}
+```
