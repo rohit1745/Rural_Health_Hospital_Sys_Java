@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="css/d_2_DoctorProfile.css">
+</head>
+<body>
+
+<header class="top-header">
+    <h1>Doctor Dashboard</h1>
+    <a href="index.html">Logout</a>
+</header>
+
+<div class="dashboard">
+
+    <!-- RADIO BUTTONS (IMPORTANT: content chya aadhi) -->
+    <input type="radio" name="menu" id="view" checked>
+    <input type="radio" name="menu" id="add">
+    <input type="radio" name="menu" id="pass">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Doctor Menu</h2>
+
+        <label for="view">View Appointment</label>
+        <label for="add">Add Prescription</label>
+        <label for="pass">Change Password</label>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- VIEW APPOINTMENT -->
+        <div class="box" id="view-content">
+            <h3>View Appointments</h3>
+            <table border="1" width="100%" cellpadding="8">
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                </tr>
+                <!-- DB data here -->
+            </table>
+        </div>
+
+        <!-- ADD PRESCRIPTION -->
+        <div class="box" id="add-content">
+            <h3>Add Prescription</h3>
+            <form action="d_4_AddPrescription" method="post">
+                <input type="text" name="PatientId" placeholder="Patient Name" required>
+                <textarea name="Prescription" placeholder="Write prescription" required></textarea>
+                <button type="submit">Save Prescription</button>
+            </form>
+        </div>
+
+        <!-- CHANGE PASSWORD -->
+        <div class="box" id="pass-content">
+            <h3>Change Password</h3>
+            <form action="d_2_DoctorChangePassword" method="post">
+            	<input type="text" name="DoctorEmailID" placeholder="Email ID" required>
+                <input type="password" name="DoctorOldPassword" placeholder="Old Password" required>
+                <input type="password" name="DoctorNewPassword" placeholder="New Password" required>
+                <input type="password" name="DoctorConfirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Update Password</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
