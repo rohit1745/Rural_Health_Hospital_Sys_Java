@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* TOP HEADER */
+.top-header {
+    height: 60px;
+    background: #23527c;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    justify-content: space-evenly;
+    
+}
+.top-header h1 {
+    font-size: 24px;
+    justify-content: center;
+    
+
+}
+.top-header a {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    color: white;
+    text-decoration: none;
+    justify-content: right;
+}
+/* DASHBOARD */
+.dashboard {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #23527c;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar label {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #4b6cb7;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.sidebar label:hover {
+    background: #1a3f60;
+}
+
+/* HIDE RADIO */
+input[type="radio"] {
+    display: none;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 40px;
+    background: #f2f2f2;
+}
+
+/* BOX */
+.box {
+    display: none;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* SHOW CONTENT */
+#book:checked ~ .content #book-content {
+    display: block;
+}
+#view:checked ~ .content #view-content {
+    display: block;
+}
+#password:checked ~ .content #password-content {
+    display: block;
+}
+
+/* FORM */
+.box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.box button {
+    width: 100%;
+    padding: 12px;
+    background: #23527c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.box button:hover {
+    background: #1a3f60;
+}
