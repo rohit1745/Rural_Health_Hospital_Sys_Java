@@ -1,0 +1,140 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY CENTER */
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* LOGIN BOX */
+.login-box {/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY CENTER */
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* LOGIN BOX */
+.login-box {
+    width: 350px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* TITLE */
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* INPUT AREA */
+.user-box {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.user-box label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #23527c;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #1a3f60;
+}
+	
+    width: 350px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* TITLE */
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* INPUT AREA */
+.user-box {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.user-box label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #23527c;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #1a3f60;
+}
