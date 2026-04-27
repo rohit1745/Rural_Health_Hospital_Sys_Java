@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="css/p_3_PatientProfile.css">
+</head>
+<body>
+
+<header class="top-header">
+    <h1>Patient Dashboard</h1>
+    <a href="index.html">Logout</a>
+</header>
+
+<div class="dashboard">
+
+    <!-- RADIO BUTTONS (HIDDEN) -->
+    <input type="radio" name="menu" id="book" checked>
+    <input type="radio" name="menu" id="view">
+    <input type="radio" name="menu" id="password">
+
+    <!-- LEFT SIDEBAR -->
+    <div class="sidebar">
+        
+
+        <label for="book">Book Appointment</label>
+        <label for="view">View Prescription</label>
+        <label for="password">Change Password</label>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+
+        <!-- BOOK APPOINTMENT -->
+        <div class="box" id="book-content">
+            <h2>Book Appointment</h2>
+            <form action="p_4_patientBookAppointment" method="post">
+                <input type="text" name="DoctorName" placeholder="Doctor's Name" required>
+                <input type="text" name="PatientName" placeholder="Patient's Name" required>
+                <input type="date" name="Date" required>
+                <input type="time" name="Time" required>
+                <input type="text" name="Status" placeholder="Status" required>
+                <button methos="submit">Book</button>
+            </form>
+        </div>
+
+        <!-- VIEW PRESCRIPTION -->
+        <div class="box" id="view-content">
+            <h2>View Prescription</h2>
+            <p>No data available</p>
+        </div>
+
+        <!-- CHANGE PASSWORD -->
+        <div class="box" id="password-content">
+            <h2>Change Password</h2>
+            <form action="p_3_PatientChangePassword" method="post">
+            	<input type="text" name="PatientEmailID" placeholder="Email ID" required>
+                <input type="password" name="PatientOldPassword" placeholder="Old Password" required>
+                <input type="password"  name="PatientNewPassword" placeholder="New Password" required>
+                <input type="password" name="PatientConformPassword"placeholder="Confirm Password" required>
+                <button type="submit">Update Password</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
